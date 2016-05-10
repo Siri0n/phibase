@@ -31,22 +31,24 @@ Browser-only method which restores original value of **PhiBase** variable and re
 
 ### Examples
 
-	var PhiBase = require("phibase");
-	var fromPhiBase = PhiBase.fromPhiBase,
-		toPhiBase = PhiBase.toPhiBase,
-		R = PhiBase.R,
-		R5 = PhiBase.R5;
+```js
+var PhiBase = require("phibase");
+var fromPhiBase = PhiBase.fromPhiBase,
+	toPhiBase = PhiBase.toPhiBase,
+	R = PhiBase.R,
+	R5 = PhiBase.R5;
 
-	console.log(toPhiBase(1)); // "1"
-	console.log(toPhiBase(2)); // "10.01"
+console.log(toPhiBase(1)); // "1"
+console.log(toPhiBase(2)); // "10.01"
 
-	var oneThird = R(1, 3);
-	console.log(toPhiBase(oneThird)) // "0.(00101000)"
+var oneThird = R(1, 3);
+console.log(toPhiBase(oneThird)) // "0.(00101000)"
 
-	var minusTwoAndHalf = fromPhiBase("-10.10100(001));
-	console.log(minusTwoAndHalf.toString()) // "-5/2";
-	console.log(minusTwoAndHalf.valueOf()) // -2.5;
+var minusTwoAndHalf = fromPhiBase("-10.10100(001));
+console.log(minusTwoAndHalf.toString()) // "-5/2";
+console.log(minusTwoAndHalf.valueOf()) // -2.5;
 
-	var phi = R5(1, 1).div(2);
-	console.log(phi.toString()); // "1/2+1/2√5"
-	console.log(phi.valueOf()); // 1.618033988749895
+var phi = R5(1, 1).div(2);
+console.log(phi.toString()); // "1/2+1/2√5"
+console.log(phi.valueOf()); // 1.618033988749895
+```
