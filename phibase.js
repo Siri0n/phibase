@@ -368,6 +368,11 @@
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
 		module.exports = Phi;
 	}else{
+		var _ = window.PhiBase;
+		Phi.noConflict = function(){
+			window.PhiBase = _;
+			return Phi;
+		}
 		window.PhiBase = Phi;
 	}
 
