@@ -44,7 +44,7 @@ console.log(toPhiBase(2)); // "10.01"
 var oneThird = R(1, 3);
 console.log(toPhiBase(oneThird)) // "0.(00101000)"
 
-var minusTwoAndHalf = fromPhiBase("-10.10100(001));
+var minusTwoAndHalf = fromPhiBase("-10.10100(001)");
 console.log(minusTwoAndHalf.toString()) // "-5/2";
 console.log(minusTwoAndHalf.valueOf()) // -2.5;
 
