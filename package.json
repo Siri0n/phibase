@@ -1,6 +1,6 @@
 {
   "name": "phibase",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Node.js module for number conversion to/from phi-based numeral system.",
   "main": "phibase.js",
   "scripts": {
