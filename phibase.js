@@ -47,11 +47,11 @@
 
 		this.add = function(other){
 			return new R5(self.r.add(other.r), self.q.add(other.q));
-		}
+		};
 
 		this.sub = function(other){
 			return new R5(self.r.sub(other.r), self.q.sub(other.q));
-		}
+		};
 
 		this.mul = function(other){
 			return new R5(
@@ -62,7 +62,7 @@
 					self.r.mul(other.q)
 				)
 			);
-		}
+		};
 
 		this.div = function(other){
 			var d = other.r*other.r - 5*other.q*other.q;
@@ -74,27 +74,27 @@
 					self.r.mul(other.q)
 				).div(d)
 			);
-		}
+		};
 
 		this.eq = function(other){
 			return (self.r.eq(other.r)) && (self.q.eq(other.q));
-		}
+		};
 
 		this.gt = function(other){
 			return diffsign(self, other) > 0;
-		}
+		};
 
 		this.gte = function(other){
 			return diffsign(self, other) >= 0;
-		}
+		};
 
 		this.lt = function(other){
 			return diffsign(self, other) < 0;
-		}
+		};
 
 		this.lte = function(other){
 			return diffsign(self, other) <= 0;
-		}
+		};
 
 		this.toString = function(){
 			var rs = self.r.toString(),
@@ -112,15 +112,15 @@
 			}	
 			s += "√5";
 			return s;
-		}
+		};
 
 		this.valueOf = function(){
 			return self.r + self.q*Math.sqrt(5);
-		}
+		};
 
 		this.toPhiBase = function(){
-
-		}
+			return toPhiBase(self);
+		};
 
 		decorate(this, operations, function(cb){
 			return function(arg){
@@ -188,13 +188,17 @@
 			return self.n*other.d <= self.d*other.n;
 		};
 
+		this.toPhiBase = function(){
+			return toPhiBase(self);
+		};
+
 		this.toString = function(){
 			return self.n + ((self.d != 1) ? ("/" + self.d) : "");
-		}
+		};
 
 		this.valueOf = function(){
 			return self.n / self.d;
-		}
+		};
 
 		decorate(this, operations, function(cb){
 			return function(arg){
@@ -263,10 +267,10 @@
 			}
 			pow = pow.mul(phi_inv);
 		}
+		if(result == "" || result == "-"){
+			result += "0";
+		}
 		if(n.gt(0)){
-			if(result == "" || result == "-"){
-				result += "0";
-			}
 			result += "." + afterDot(n);
 		}
 		return result;
