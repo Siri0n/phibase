@@ -247,7 +247,6 @@
 		if(n.lt(0)){
 			result += "-";
 			n = n.mul(-1);
-			console.log("n is negative");
 		}
 		var pow = R5(1);
 		while(pow.lte(n)){
@@ -348,7 +347,6 @@
 				periodValue = periodValue.add(pow);
 			}
 		}
-		console.log(i, periodicPart);
 		result = result.add(
 			periodValue.div(
 				R5(1).sub(periodPow)

@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/Siri0n/phibase/issues"
   },
-  "homepage": "https://github.com/Siri0n/phibase#readme"
+  "homepage": "https://github.com/Siri0n/phibase#readme",
+  "dependencies": {}
 }
