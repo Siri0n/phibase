@@ -4,7 +4,8 @@
   "description": "Node.js module for number conversion to/from phi-based numeral system.",
   "main": "phibase.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./phibase.spec.js",
+    "bench": "node ./phibase.benchmark.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
     "url": "https://github.com/Siri0n/phibase/issues"
   },
   "homepage": "https://github.com/Siri0n/phibase#readme",
-  "dependencies": {}
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "should": "^13.2.3"
+  }
 }
