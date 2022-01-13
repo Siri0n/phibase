@@ -65,7 +65,9 @@
 		};
 
 		this.div = function(other){
-			var d = other.r*other.r - 5*other.q*other.q;
+			var d = other.r.mul(other.r).sub(
+				other.q.mul(other.q).mul(5)
+			);
 			return new R5(
 				self.r.mul(other.r).sub(
 					self.q.mul(other.q).mul(5)
